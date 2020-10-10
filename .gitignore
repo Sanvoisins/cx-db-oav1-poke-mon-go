@@ -1,9 +1,9 @@
 .DS_Store
-./api/node_modules
+./api/node_modules/
 ./api/.env
 ./api/yarn-error.log
 ./api/.DS_Store
 
-./client/node_modules
+./client/node_modules/
 ./client/yarn-error.log
 ./client/.DS_Store
