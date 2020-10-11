@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { FaTrash } from 'react-icons/fa';
-import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import './pokemon-detail.css';
 

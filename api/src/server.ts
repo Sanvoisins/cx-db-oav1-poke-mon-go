@@ -15,12 +15,12 @@ async function main() {
     await connect(process.env.DATABASE_URI as string)
     success('Database successfully connected!')
     routes.routes(app); 
-    // Pokemon.insertMany(dataPokemon, (error, docs) => {
-    //   if (error) {
-    //     error("Pokemon are not charged")
-    //   }
-    //   success("Pokemon are charged")
-    // })
+    Pokemon.insertMany(dataPokemon, (error, docs) => {
+      if (error) {
+        error("Pokemon are not charged")
+      }
+      success("Pokemon are charged")
+    })
   } catch (e) {
     error(e.message)
   }

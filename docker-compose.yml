@@ -1,0 +1,40 @@
+version: '3'
+services:
+  database:
+    image: mongo:latest
+    container_name: app-mongo-container
+    environment:
+      - MONGO_DATABASE=database
+      - MONGO_ROOT_USERNAME=root
+      - MONGO_ROOT_PASSWORD=root
+    expose:
+      - 27017
+    ports:
+      - 27017:27017
+    networks:
+      - fullstack
+  api:
+    container_name: app-node-container
+    build: ./api/
+    volumes:
+      - ./api/:/usr/src/app/
+    expose: 
+      - 5000
+    depends_on:
+      - database
+    ports:
+      - 5000:5000
+    networks:
+      - fullstack
+  client: 
+    container_name: app-react-container
+    image: app-react-container
+      expose: 
+        - 3000 
+    ports:
+      - "3000:3000"
+networks:
+  fullstack:
+      driver: bridge
+
+# /!\ check container dependencies / depends_on + volumes
