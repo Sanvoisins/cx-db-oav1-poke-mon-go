@@ -1,5 +1,8 @@
-FROM node:latest
+FROM node:slim
 WORKDIR /app
+COPY ./package.json ./
+COPY ./yarn.lock ./
+RUN yarn install
 COPY . .
-RUN yarn
-RUN yarn dev
+EXPOSE 5000
+CMD ["yarn", "dev"]

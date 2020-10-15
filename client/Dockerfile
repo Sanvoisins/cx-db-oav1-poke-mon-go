@@ -1,13 +1,8 @@
-FROM node:latest
-# Create app directory
-WORKDIR /usr/src/app
-# Install app dependencies
-COPY package*.json ./
-
-RUN npm install --silent
-# Copy app source code
+FROM node:slim
+WORKDIR /app
+COPY ./package.json ./
+COPY ./yarn.lock ./
+RUN yarn install
 COPY . .
-
-#Expose port and start application
 EXPOSE 3000
-CMD ["npm", "run", "start"]
+CMD ["yarn", "start"]

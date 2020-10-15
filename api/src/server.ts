@@ -10,7 +10,7 @@ const app = express();
 const routes = new Routes();
 async function main() {
   try {
-    checkEnv(['DATABASE_URI'])
+    checkEnv(['DATABASE_URI', 'API_PORT'])
     info('\nServer initialization...')
     await connect(process.env.DATABASE_URI as string)
     success('Database successfully connected!')
