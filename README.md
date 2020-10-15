@@ -1,16 +1,8 @@
 
 
-## Start Database 
+## Start project
 
-Just run the command "docker-compose up -d" on a terminal in the parent folder
-
-## Start API
-
-Run the command "yarn dev" on a terminal in the api folder
-
-## Start Front
-
-Run the command "yarn start" on a terminal in the client folder
+Build docker iamges in api and client folder and run the command "docker-compose up"
 
 `Thanks & enjoy 😊 ` 
 
