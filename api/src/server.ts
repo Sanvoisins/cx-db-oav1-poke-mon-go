@@ -12,7 +12,7 @@ async function main() {
   try {
     checkEnv(['DATABASE_URI', 'API_PORT'])
     info('\nServer initialization...')
-    await connect(process.env.DATABASE_URI as string)
+    await connect(process.env.DATABASE_URI_DEV as string)
     success('Database successfully connected!')
     routes.routes(app); 
     Pokemon.insertMany(dataPokemon, (error, docs) => {
