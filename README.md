@@ -10,7 +10,7 @@ Create .env file with two parameters in the API folder:
 ## Second STEP ✌🏼
 Build docker images in API and CLIENT folder 
 
-### Third STEP 🤟🏼
+## Third STEP 🤟🏼
 Run **"docker-compose up"** in the parent folder
 
 
