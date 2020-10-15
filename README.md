@@ -3,12 +3,12 @@
 # Start project
 
 ## First STEP 👍🏼
-Create .env file with two parameters :
+Create .env file with two parameters in the API folder:
 - **DATABASE_URI="mongodb://pokemon-db:27017/pokemons"**
 - **PORT=5000**
 
 ## Second STEP ✌🏼
-Build docker images in api and client folder 
+Build docker images in API and CLIENT folder 
 
 ### Third STEP
 Run "docker-compose up" in the parent folder
